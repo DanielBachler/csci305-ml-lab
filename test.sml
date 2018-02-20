@@ -7,15 +7,6 @@ fun isMember (e,Empty) = false
     else isMember(e, theSet);
 
 fun list2Set [] = Empty
-| list2Set [x::xs] =
-    let
-      val theSet = Set(x, list2Set [xs])
-    in
-      if (isMember(x, theSet))
-        then
-        theSet = theSet
-      else
-        theSet = Set(x, theSet)
-    end;
+| list2Set (x::xs) = Set(x, list2Set xs);
 
-list2Set [1,2];
+list2Set [1,2,3,4];
