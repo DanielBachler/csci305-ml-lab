@@ -151,7 +151,7 @@ Write a function `isMember` that determines if an element `e` is part of the set
 
 ### list2Set function
 
-Write a function `list2Set` that convertes a list into a set ensuring that the properties of a well formed set, i.e., that is has no duplicates, are maintained. You may find it useful to make use of your `isMember` function in your `list2Set` function.
+Write a function `list2Set` that converts a list into a set ensuring that the properties of a well formed set, i.e., that is has no duplicates, are maintained. You may find it useful to make use of your `isMember` function in your `list2Set` function.
 
 For example:
 

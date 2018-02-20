@@ -1,15 +1,20 @@
-<firstname> <lastname>
+Daniel Bachler
 CSCI 305
 Spring 2018
 Lab Questions
 =======================
-1.
+1. val it = [4,2,5,2,6,10] : int list
 
-2.
+2. The function f goes through the list, adding 1 to each part and putting it
+back in the list, calls itself recursively
 
-3.
+3. First line defines the function as taking in a list of unspecified type,
+which is later inferred based on operations to be an int list.  It also
+states that an empty list, should just be an empty list, basically a nil check.
 
-4.
+4. Second line calls the function again, on the head and rest of the list, with
+recursive calls for the list until the end is reached.  As each element is
+selected one is added to it, and it is re-added to the list.
 
 5.
 
@@ -23,12 +28,15 @@ Lab Questions
 
 10.
 
-11.
+11. ML seems to be a very powerful language once it is understood.  For math
+or calculation purposes it has more concise functionality than other languages
 
-12.
+12. ML is very hard to understand at first, it takes a lot of time and research
+into the language to grasp its syntax and symbols, or at least for me it did.
 
 13.
 
 14.
 
-15.
+15. I might use ML again if I have a problem I feel it would be suited to solve.
+Perhaps some kind of calculation or something best solved with recursion.

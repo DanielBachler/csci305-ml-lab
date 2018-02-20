@@ -2,12 +2,23 @@
 *
 * CSCI 305 - ML Programming Lab
 *
-* <firstname> <lastname>
-* <email-address>
+* Daniel Bachler
+* daniel.bachler@comcast.net
 *
 ***************************************************************)
 
 (* Define your data type and functions here *)
+datatype 'element set = Empty | Set of 'element * 'element set;
+
+(*Takes 2 arguments, a number and a set.  If the set is defined as empty returns false by default.
+Other wise starts going through the set testing for equality until a match is found.  If no match is found
+false is returned*)
+fun isMember (e,Empty) = false
+ | isMember (e,Set(x, theSet)) =
+    if (e = x)
+      then true
+    else isMember(e, theSet);
+
 
 (* Simple function to stringify the contents of a Set of characters *)
 fun stringifyCharSet Empty = ""
