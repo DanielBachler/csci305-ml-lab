@@ -16,9 +16,19 @@ states that an empty list, should just be an empty list, basically a nil check.
 recursive calls for the list until the end is reached.  As each element is
 selected one is added to it, and it is re-added to the list.
 
-5.
+5. Written like that it throws an error due to no parentheses around the parameters.
+If the parentheses are put in the correct place it outputs:
+Error: operator and operand don't agree [tycon mismatch]
+operator domain: string * string set
+operand:         string * string list
+in expression:
+  isMember ("one","1" :: "2" :: <exp> :: <exp>)
 
-6.
+If you change the list to a set, it outputs:
+  val it = false : bool
+
+6. It uses tail recursion, since it starts with the head of the list and moves along the tail pulling the first
+element each time.
 
 7.
 
@@ -34,9 +44,11 @@ or calculation purposes it has more concise functionality than other languages
 12. ML is very hard to understand at first, it takes a lot of time and research
 into the language to grasp its syntax and symbols, or at least for me it did.
 
-13.
+13. I did not enjoy this lab, ML is incredibly confusing and attempting to debug
+is the hardest part.  I dislike the error messages structure as they are harder to read and
+understand than languages I've use previously.
 
-14.
+14. About 20, most of which was spent reading MIT lecture pages trying to understand ML
 
 15. I might use ML again if I have a problem I feel it would be suited to solve.
 Perhaps some kind of calculation or something best solved with recursion.

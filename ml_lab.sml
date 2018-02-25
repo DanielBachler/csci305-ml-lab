@@ -51,7 +51,7 @@ list2Set ["x", "y", "z", "x"];
 f [3, 1, 4, 1, 5, 9]
 
 (* Question 5 *)
-val quest5 = isMember "one" (list2Set ["1", "2", "3", "4"]);
+val quest5 = isMember ("one" (list2Set ["1", "2", "3", "4"]));
 print ("\nQuestion 5: " ^ Bool.toString(quest5) ^ "\n");
 
 (* Question 7 *)
