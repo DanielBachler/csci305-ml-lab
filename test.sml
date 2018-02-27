@@ -16,9 +16,6 @@ fun list2Set [] = Empty
       list2Set xs
     else
       Set(x,j)
-    end
-  end;
+    end;
 
-list2Set [1,2,3,4];
-
-isMember ("one", Set("1", Set("2", Set("3", Set("4", Empty)))));
+val quest5 = isMember ("one", list2Set ["1", "2", "3", "4"]);
