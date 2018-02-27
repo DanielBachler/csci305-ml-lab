@@ -6,16 +6,18 @@ fun isMember (e,Empty) = false
       then true
     else isMember(e, theSet);
 
-fun list2Set' (acc:set) (list:int list) =
-  case list of
-    [] => nil
-    | x::xs =>
-      if (isMember (x, acc) = true)
-      then
-        acc = Set(Empty, list2Set' (acc) (xs))
-      else
-        acc = Set(x, list2Set' (acc) (xs))
-      end
+fun list2Set [] = Empty
+| list2Set (x::xs) =
+  let
+    val j = list2Set xs
+  in
+    if (isMember (x, j))
+    then
+      list2Set xs
+    else
+      Set(x,j)
+    end
+  end;
 
 list2Set [1,2,3,4];
 
