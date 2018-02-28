@@ -21,6 +21,23 @@ fun isMember (e,Empty) = false
       then true
     else isMember(e, theSet);
 
+(*Has 2 possible patterns, an empty list returns an Empty set item
+The other takes in a list and sets the head to x, the tail or rest of list to xs
+Within the function the value of j is the rest of the list with the function called on it
+and that value is used in an if statement.  The if statement checks if the current head is
+already in the set, if it is it just moves on to the tail, otherwise it adds the head to the set
+and moves on.*)
+fun list2Set [] = Empty
+  | list2Set (x::xs) =
+    let
+      val j = list2Set xs
+    in
+      if (isMember (x, j))
+      then
+        list2Set xs
+      else
+        Set(x,j)
+      end;
 
 (* Simple function to stringify the contents of a Set of characters *)
 fun stringifyCharSet Empty = ""
@@ -53,7 +70,7 @@ list2Set ["x", "y", "z", "x"];
 f [3, 1, 4, 1, 5, 9]
 
 (* Question 5 *)
-val quest5 = isMember ("one" (list2Set ["1", "2", "3", "4"]));
+val quest5 = isMember ("one", list2Set ["1", "2", "3", "4"]);
 print ("\nQuestion 5: " ^ Bool.toString(quest5) ^ "\n");
 
 (* Question 7 *)
