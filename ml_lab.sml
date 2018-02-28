@@ -8,6 +8,8 @@
 ***************************************************************)
 
 (* Define your data type and functions here *)
+(*Creates a recursive datatype called set, with 2 states.  Empty and Set, with Set being the recursive element.
+It is a polymorphic datatype*)
 datatype 'element set = Empty | Set of 'element * 'element set;
 
 (*Takes 2 arguments, a number and a set.  If the set is defined as empty returns false by default.
