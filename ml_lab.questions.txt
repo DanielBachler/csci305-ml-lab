@@ -30,9 +30,11 @@ If you change the list to a set, it outputs:
 6. It uses tail recursion, since it starts with the head of the list and moves along the tail pulling the first
 element each time.
 
-7.
+7. val quest7 = Set ("best",Set ("times,",Set #)) : string set
 
-8.
+8.  The main benefit that I could find is that unlike in "regular" recursion, tail recursion does not require
+the computer to remember the "return address" so the stack does not need to be utilized for recursion.  Instead the
+value is returned directly into the original function, making it run faster and with less memory.
 
 9.
 
